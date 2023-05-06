@@ -27,6 +27,7 @@ public class Main {
             System.out.println("2: Mostrar productos en stock");
             System.out.println("3: Mostrar productos con Iva");
             System.out.println("4: Mostrar productos con precio mayores a 100 y menos a 200");
+            System.out.println("5: Mostrar todos los productos registrados");
             System.out.println("Elija la operacion: ");
             respuesta = scan.nextInt();
         } while (respuesta < 1 || respuesta > 6);
@@ -75,13 +76,14 @@ public class Main {
             case 5 ->
             {
                 System.out.println("Mostrar todos los productos registrados");
+                fun_listar();
             }
         }
     }
 
     public static void iva() {
         for (int i = 0; i < listaproductos.size(); i++) {
-            if (Objects.equals(listaproductos.get(i).getAplicaIva(), "true")) {
+            if (listaproductos.get(i).getAplicaIva()) {
                 listaproductos.get(i).mostrarProducto();
             }
         }
