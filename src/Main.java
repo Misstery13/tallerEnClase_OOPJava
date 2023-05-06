@@ -30,7 +30,7 @@ public class Main {
             System.out.println("5: Mostrar todos los productos registrados");
             System.out.println("Elija la operacion: ");
             respuesta = scan.nextInt();
-        } while (respuesta < 1 || respuesta > 6);
+        } while (respuesta < 1 || respuesta > 5);
         return respuesta;
     }
 
